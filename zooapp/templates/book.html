@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>book</title>
+</head>
+
+<style>
+    h4 {
+        color: rgb(1, 2, 82);
+    }
+    
+    th {
+        color: rgb(45, 48, 255);
+    }
+    
+    td {
+        color: rgb(4, 0, 255)
+    }
+    
+    body {
+        background-image: url("https://i.pinimg.com/originals/f7/86/bf/f786bfc1208cf28a541929d439c60286.jpg");
+    }
+</style>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;
+<button><a href="logout">back</a></button>
+
+<center>
+
+    <body>
+        <h1>vistor entry form</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <table> {{form.as_table}}</table>
+            <input type="submit" value="submit">
+        </form>
+
+    </body>
+</center>
+
+</html>
