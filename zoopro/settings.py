@@ -25,7 +25,7 @@ SECRET_KEY = 'i4n=_3&1_i+q^uagudav5#(l_p_krd3r19n0f*&20k2-vi2c0-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zoopro.herokuapp.com','127.0.0.1']
 
 
 # Application definition
