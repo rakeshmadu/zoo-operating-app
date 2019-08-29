@@ -16,7 +16,6 @@ def home(request):
     return render(request,'home.html')
 
 def Sign(request):
-
     form = Signupform()
     if request.method =='POST':
         form = Signupform(request.POST)
@@ -32,8 +31,8 @@ def login(request):
         if form.is_valid():
             email = request.POST.get('email')
             password = request.POST.get('password')
-
             log = Registration.objects.filter(email=email,password=password)
+            user = authenticate(request, email=email,password=password)
             if not log:
                 messages.error(request,'email or password not correct')
                 return render(request,'login.html')
