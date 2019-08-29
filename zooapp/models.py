@@ -22,13 +22,13 @@ class Registration(models.Model):
     age = models.CharField(max_length=3)
     gender = models.CharField(max_length=30,choices=Type)
     contact_number = models.CharField(max_length=30)
-    address = models.CharField(max_length=300)
+    address = models.TextField(max_length=300)
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
     country = models.CharField(max_length=30)
     pincode = models.CharField(max_length=30)
     def __str__(self):
-        return self.email
+        return self.Employ_name
 
 class Booking(models.Model):    
     

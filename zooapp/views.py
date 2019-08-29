@@ -43,6 +43,7 @@ def login(request):
             return render(request,'login.html',{'form':form})
     return render(request,'login.html',{'form':form})
 
+@login_required(login_url ='signin')
 def booking(request):
     form = Bookingform()
     if request.method == 'POST':

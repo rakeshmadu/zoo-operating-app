@@ -9,7 +9,7 @@ User = get_user_model()
 class Signupform(forms.ModelForm):
     class Meta:
         model = Registration
-        fields = '__all__'
+        fields = ['Employ_name','email','password','age','gender','contact_number','address','city','state','country','pincode']
         widgets = {
             'password': forms.PasswordInput(),
         }
