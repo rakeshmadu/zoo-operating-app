@@ -26,3 +26,4 @@ class Bookingform(forms.ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
+        
