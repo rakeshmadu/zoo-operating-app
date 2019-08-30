@@ -67,3 +67,6 @@ def count(request):
     count= Booking.objects.all().count() 
     adding=Booking.objects.all().aggregate(Sum('ticketprice'))
     return render(request,'count.html',{'count':count,"adding":adding['ticketprice__sum']})
+
+def graph(request):
+    return render(request,'graph.html')

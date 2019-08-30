@@ -30,7 +30,12 @@ class Registration(models.Model):
     def __str__(self):
         return self.Employ_name
 
-class Booking(models.Model):    
+class Booking(models.Model):
+    Type = (
+        ('male','male'),
+        ('female','female'),
+        ('other','other')
+    )  
     
     TIMING= (
         ('09:30 am to 10:30 am','09:30 am to 10:30 am'),
@@ -42,10 +47,13 @@ class Booking(models.Model):
     Date = models.DateField(help_text='mm/dd/yyyy')
     Vistorname = models.CharField(max_length =50)
     age = models.CharField(max_length =50)
+    gender = models.CharField(max_length=30,choices=Type)
     TimeSlot = models.CharField(max_length = 50,choices = TIMING)
     Vehicle_No = models.CharField(max_length = 50)
     email = models.EmailField()
     phone_no = models.CharField(max_length=50)
     ticketprice = models.IntegerField()
+    def __str__(self):
+        return self.Vistorname
 
 

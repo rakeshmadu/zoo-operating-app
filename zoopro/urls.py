@@ -26,7 +26,8 @@ urlpatterns = [
     path('book',views.booking),
     path('blist',views.booklist),
     path('count',views.count),
-    path('list',views.reglist)
+    path('list',views.reglist),
+    path('graph',views.graph)
   
 
 ]
