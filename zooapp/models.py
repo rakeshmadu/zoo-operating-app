@@ -2,6 +2,7 @@ from django.db import models
 from django.db import models
 from random import *
 # Create your models here.
+
 class Registration(models.Model):
     Type = (
         ('male','male'),
@@ -30,6 +31,8 @@ class Registration(models.Model):
     def __str__(self):
         return self.Employ_name
 
+
+
 class Booking(models.Model):
     Type = (
         ('male','male'),
@@ -55,5 +58,3 @@ class Booking(models.Model):
     ticketprice = models.IntegerField()
     def __str__(self):
         return self.Vistorname
-
-
