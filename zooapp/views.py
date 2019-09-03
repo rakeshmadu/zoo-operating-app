@@ -72,6 +72,6 @@ def count(request):
 def graph(request):
     return render(request,'graph.html')
 
-def multy(request):    
-    sing=Booking.objects.filter(Vistorname='Vistorname')
+def multy(request):
+    sing=Booking.objects.filter(Vistorname='Vistorname')    
     return render(request,'multy.html',{'form':sing})

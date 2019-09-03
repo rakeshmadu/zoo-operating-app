@@ -1,30 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+    body {
+        color: rgb(0, 0, 0);
+    }
+    
+    th {
+        color: rgba(6, 10, 235, 0.788);
+    }
+    
+    td {
+        color: rgb(6, 2, 65)
+    }
+    
+    body {
+        background-image: url("https://i.pinimg.com/originals/94/30/e8/9430e85bcee211cda9dfff8400e2fe19.jpg");
+        font-size: 5mm
+    }
+</style>
+
+<body style="background-color:rgba(25, 230, 76, 0.555);"></body>
 
 <body>
-    <table class="table table-hover">
-        <thead>
+    <center>
+        <br>
+        <h1>Visitor Entry Details</h1>
+        <br>
+        <table border=4>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
+                <th>Sr.no</th>
+                <th>Date</th>
+                <th>Visitorname</th>
                 <th>Age</th>
                 <th>Gender</th>
-
+                <th>Timeslot</th>
+                <th>Vehicle_no</th>
+                <th>email_id</th>
+                <th>Mobile_number</th>
+                <th>Ticket Price</th>
             </tr>
-        </thead>
-        <tbody>
-
-            {% for theatre in form %}
+            {% for emp in form %}
             <tr>
                 <td>{{ forloop.counter }}</td>
-                <td>{{ theatre.Vistorname }}</td>
-                <td>{{ theatre.age }}</td>
-                <td>{{ theatre.gender }}</td>
+                <td>{{emp.Date}}</td>
+                <td>{{emp.Vistorname}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.TimeSlot}}</td>
+                <td>{{emp.Vehicle_No}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.phone_no}}</td>
+                <td>{{emp.ticketprice}}</td>
             </tr>
             {% endfor %}
+        </table>
+        <br>
+        <button><a href="logout">back</a></button>
 
-        </tbody>
-    </table>
+    </center>
 </body>
 
 </html>
