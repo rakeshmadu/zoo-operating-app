@@ -27,7 +27,8 @@ urlpatterns = [
     path('blist',views.booklist),
     path('count',views.count),
     path('list',views.reglist),
-    path('graph',views.graph)
+    path('graph',views.graph),
+    path('multy',views.multy)
   
 
 ]

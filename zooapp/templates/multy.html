@@ -2,13 +2,29 @@
 <html>
 
 <body>
-    <p id="demo"></p>
-    <script>
-        var x = 5;
-        var y = 2;
-        var z = x * y;
-        document.getElementById("demo").innerHTML = z;
-    </script>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for theatre in form %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ theatre.Vistorname }}</td>
+                <td>{{ theatre.age }}</td>
+                <td>{{ theatre.gender }}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
 </body>
 
 </html>
