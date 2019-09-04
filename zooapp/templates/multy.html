@@ -36,38 +36,19 @@
     <center>
         <br>
         <h1>Visitor Entry Details</h1>
-        <br>
-        <table border=4>
-            <tr>
-                <th>Sr.no</th>
-                <th>Date</th>
-                <th>Visitorname</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Timeslot</th>
-                <th>Vehicle_no</th>
-                <th>email_id</th>
-                <th>Mobile_number</th>
-                <th>Ticket Price</th>
-            </tr>
-            {% for emp in form %}
-            <tr>
-                <td>{{ forloop.counter }}</td>
-                <td>{{emp.Date}}</td>
-                <td>{{emp.Vistorname}</td>
-                <td>{{emp.age}}</td>
-                <td>{{emp.gender}}</td>
-                <td>{{emp.TimeSlot}}</td>
-                <td>{{emp.Vehicle_No}}</td>
-                <td>{{emp.email}}</td>
-                <td>{{emp.phone_no}}</td>
-                <td>{{emp.ticketprice}}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        <br> {% for pl in data %}
+        <div class="modal-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Visitorname:</b> {{pl.Vistorname}}</li>
+                <li class="list-group-item"><b>Age:</b> {{pl.age}}</li>
+                <li class="list-group-item"><b>Gender:</b> {{pl.gender }}</li>
+                <li class="list-group-item"><b>Mobile_number:</b> {{pl.phone_no}}</li>
+            </ul>
+            <td><input type="submit" value="Buy"></td>
+        </div>
+        {%endfor%}
         <br>
         <button><a href="logout">back</a></button>
-
     </center>
 </body>
 

@@ -68,10 +68,9 @@ def count(request):
     adding=Booking.objects.all().aggregate(Sum('ticketprice'))
     return render(request,'count.html',{'count':count,"adding":adding['ticketprice__sum']})
 
-
 def graph(request):
     return render(request,'graph.html')
 
 def multy(request):
-    sing=Booking.objects.filter(Vistorname='Vistorname')    
-    return render(request,'multy.html',{'form':sing})
+    tic = Booking.objects.all()
+    return render(request,"multy.html",{'form':tic})
