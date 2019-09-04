@@ -71,6 +71,6 @@ def count(request):
 def graph(request):
     return render(request,'graph.html')
 
-def multy(request):
-    tic = Booking.objects.all()
+def multy(request,id):
+    tic = Booking.objects.get(id=id)
     return render(request,"multy.html",{'form':tic})

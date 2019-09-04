@@ -1,10 +1,15 @@
 from django import forms
 from .models import Registration,Booking
+from django.contrib.admin.widgets import AdminDateWidget
 from django.contrib.auth import (
     authenticate,
     get_user_model
 )
 User = get_user_model()
+
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 class Signupform(forms.ModelForm):
     class Meta:
@@ -25,5 +30,8 @@ class Loginform(forms.ModelForm):
 class Bookingform(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = '__all__'
-        
+        fields = ['Date','Vistorname','age','gender','TimeSlot','Vehicle_No','email','phone_no','ticketprice']
+        widgets = {
+            'Date': DateInput(),
+        }
+       

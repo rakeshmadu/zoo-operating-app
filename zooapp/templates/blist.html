@@ -25,16 +25,19 @@
     }
     
     body {
-        background-color: forestgreen font-size: 5mm
+        background-image: url("https://www.fg-a.com/wallpapers/white-background-vines.jpg");
+        font-size: 5mm
     }
 </style>
 
-<body style="background-color:rgba(25, 230, 76, 0.555);"></body>
+<body style="background-color:rgba(255, 255, 255, 0.479);"></body>
 
 <body>
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><a href="logout">back</a></button>
     <center>
         <br>
-        <h1>Visitor Entry Details</h1>
+        <h1>Visitor Booked Details</h1>
         <br>
         <table border=4>
             <tr>
@@ -44,29 +47,31 @@
                 <th>Age</th>
                 <th>Gender</th>
                 <th>Timeslot</th>
-                <th>Vehicle_no</th>
+
                 <th>email_id</th>
                 <th>Mobile_number</th>
                 <th>Ticket Price</th>
+
             </tr>
             {% for emp in form %}
             <tr>
                 <td>{{ forloop.counter }}</td>
                 <td>{{emp.Date}}</td>
                 <td>
-                    <a href="multy">{{emp.Vistorname}}</a></td>
+                    <a href="/multy/{{emp.id}}">{{emp.Vistorname}}</a></td>
                 <td>{{emp.age}}</td>
                 <td>{{emp.gender}}</td>
                 <td>{{emp.TimeSlot}}</td>
-                <td>{{emp.Vehicle_No}}</td>
+
                 <td>{{emp.email}}</td>
                 <td>{{emp.phone_no}}</td>
                 <td>{{emp.ticketprice}}</td>
+
             </tr>
             {% endfor %}
         </table>
         <br>
-        <button><a href="logout">back</a></button>
+        <button><a href="book">newbooking</a></button>
 
     </center>
 </body>

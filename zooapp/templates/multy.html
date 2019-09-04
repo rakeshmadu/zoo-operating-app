@@ -31,24 +31,27 @@
 </style>
 
 <body style="background-color:rgba(25, 230, 76, 0.555);"></body>
+<br>
+<button><a href="/blist">back</a></button>
 
 <body>
     <center>
         <br>
-        <h1>Visitor Entry Details</h1>
-        <br> {% for pl in data %}
+        <h1>Visitor Details</h1>
+
         <div class="modal-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Visitorname:</b> {{pl.Vistorname}}</li>
-                <li class="list-group-item"><b>Age:</b> {{pl.age}}</li>
-                <li class="list-group-item"><b>Gender:</b> {{pl.gender }}</li>
-                <li class="list-group-item"><b>Mobile_number:</b> {{pl.phone_no}}</li>
+                <li class="list-group-item"><b>Name:</b> {{form.Vistorname}}</li>
+                <li class="list-group-item"><b>Age:</b> {{form.age}}</li>
+                <li class="list-group-item"><b>Gender:</b> {{form.gender }}</li>
+                <li class="list-group-item"><b>Mobile_number:</b> {{form.phone_no}}</li>
+                <li class="list-group-item"><b>Email_id:</b> {{form.email}}</li>
+                <li class="list-group-item"><b>Ticket_id:</b> {{form.Ticket_id}}</li>
+
             </ul>
-            <td><input type="submit" value="Buy"></td>
         </div>
-        {%endfor%}
-        <br>
-        <button><a href="logout">back</a></button>
+
+
     </center>
 </body>
 

@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 from random import *
 # Create your models here.
 
@@ -46,8 +45,12 @@ class Booking(models.Model):
         ('12:30 pm to 01:30 pm','12:30 pm to 01:30 pm'),
         ('02:30 pm to 03:30 pm','02:30 pm to 03:30 pm'),
         ('04:00 pm to 05:30 pm','04:00 pm to 05:30 pm'),
-    )    
-    Date = models.DateField(help_text='mm/dd/yyyy')
+    )
+    p = ''
+    for i in range(0,4):
+        p = p+str(randint(0,9))
+    Ticket_id = models.PositiveIntegerField(default = p) 
+    Date = models.DateField()
     Vistorname = models.CharField(max_length =50)
     age = models.CharField(max_length =50)
     gender = models.CharField(max_length=30,choices=Type)

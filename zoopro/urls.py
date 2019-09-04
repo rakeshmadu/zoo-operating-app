@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from zooapp import views
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/',admin.site.urls),
@@ -28,7 +29,7 @@ urlpatterns = [
     path('count',views.count),
     path('list',views.reglist),
     path('graph',views.graph),
-    path('multy',views.multy)
-  
+    path('multy/<int:id>/',views.multy)
+    # url(r'^multy/(?P<id>\d+)/$',views.multy)
 
 ]
